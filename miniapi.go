@@ -38,7 +38,7 @@ func forbidden(w http.ResponseWriter, req *http.Request) {
 |--------------------------------------------------------------------------
 */
 
-func addEntry(message, author string) {
+func addEntry(author, message string) {
 	f, err := os.OpenFile("data.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 
 	if err != nil {
