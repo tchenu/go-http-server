@@ -26,12 +26,6 @@ func badRequest(w http.ResponseWriter, req *http.Request, message string) {
 	fmt.Fprintf(w, message)
 }
 
-func forbidden(w http.ResponseWriter, req *http.Request) {
-	w.WriteHeader(http.StatusForbidden)
-	w.Header().Set("Content-Type", "application/json")
-	fmt.Fprintf(w, "Forbidden.")
-}
-
 /*
 |--------------------------------------------------------------------------
 | Storage helpers
